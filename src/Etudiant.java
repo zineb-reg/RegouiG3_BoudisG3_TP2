@@ -121,6 +121,21 @@ public class Etudiant{ //extends CreateObj
 		     }                           
 		     
 		}
+		public void Add_Nbr_Books () throws SQLException
+		{
+			 UniversiteRepository UnivRep= new UniversiteRepository();
+			 Universite univ = UnivRep.GetById(id_universite);
+			 
+			 if (univ.getPack() == TypePackage.Standard)
+		     {
+				 
+				 setNbLivreMensuel_Autorise(15);
+		     }
+		     else if (univ.getPack() == TypePackage.Premium)
+		     {
+		    	 setNbLivreMensuel_Autorise(15*2);
+		     } 
+		}
 
 
 
