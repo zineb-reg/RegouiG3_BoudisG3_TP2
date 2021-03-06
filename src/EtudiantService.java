@@ -34,24 +34,6 @@ public class EtudiantService implements IEtdSrv{
 		 System.out.println("Log: Fin de l'opération d'ajout de l'étudiant avec matricule "+matricule);
 		 return true;
 	}
-	public void Add_Nbr_Books (int id_universite) throws SQLException
-	{
-		 List <Etudiant> etudiants = new ArrayList <Etudiant>();
-		 UniversiteRepository UnivRep= new UniversiteRepository();
-		 Universite univ = UnivRep.GetById(id_universite);
-		 for (Etudiant E : etudiants) 
-		 {
-			 if (univ.getPack() == TypePackage.Standard)
-		     {
-				 E.setNbLivreMensuel_Autorise(15);
-		     }
-		     else if (univ.getPack() == TypePackage.Premium)
-		     {
-		    	 E.setNbLivreMensuel_Autorise(15*2);
-		     } 
-		}	 
-	}
-	
 	
 
 public ArrayList<Etudiant> GetEtudiantParUniversitye()
