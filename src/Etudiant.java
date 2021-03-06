@@ -122,11 +122,4 @@ public class Etudiant{
 		     
 		}
 		
-
-
-
-		/*public CreateObj getObj(int matricule, String nom, String prenom, String email,String pwd, int id_universite) {
-			return new Etudiant (matricule, nom, prenom, email, pwd, id_universite);
-		}*/
-		
 }
