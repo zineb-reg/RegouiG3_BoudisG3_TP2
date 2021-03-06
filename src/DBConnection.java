@@ -2,9 +2,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/* to implement the singleton pattern we changed the access to the constructor from public to 
- * private in addition to adding an instance "instance" and the method getInstance()*/
-
 public class DBConnection {
 	   
 		String BDD = "nomBD";
