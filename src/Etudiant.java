@@ -1,6 +1,6 @@
 import java.sql.SQLException;
 
-public class Etudiant{ //extends CreateObj
+public class Etudiant{ 
 
 		private int matricule;
 	    private String nom;
