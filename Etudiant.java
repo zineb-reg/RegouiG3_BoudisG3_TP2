@@ -1,6 +1,6 @@
-import java.sql.SQLException;
 
-public class Etudiant{ 
+
+public abstract class Etudiant{ 
 
 		private int matricule;
 	    private String nom;
@@ -101,37 +101,7 @@ public class Etudiant{
 		public void setPwd(String pwd) {
 			this.pwd = pwd;
 		}
-
-		public static Etudiant getUniv (int matricule, String nom, String prenom, String email,String pwd, int id_universite)
-		{
-			return new Etudiant (matricule, nom, prenom, email, pwd, id_universite);
-		}
 		
-		public void nbr_book_authorized (TypePackage pac) throws SQLException
-		{
-			 if (pac == TypePackage.Standard)
-		     {
-		         this.setNbLivreMensuel_Autorise(10);
-		     }
-		     else if (pac == TypePackage.Premium)
-		     {
-		    	 this.setNbLivreMensuel_Autorise(10*2);
-		     }                           
-		     
-		}
-		
-		public void Add_Nbr_Books (TypePackage pac) throws SQLException
-		{
-			 
-			 if (pac == TypePackage.Standard)
-		     {
-				 
-				 setNbLivreMensuel_Autorise(15);
-		     }
-		     else if (pac == TypePackage.Premium)
-		     {
-		    	 setNbLivreMensuel_Autorise(15*2);
-		     } 
-		}
+		public abstract void nbr_book_authorized ();
 		
 }
