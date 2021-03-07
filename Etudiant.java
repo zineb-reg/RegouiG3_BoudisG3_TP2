@@ -107,32 +107,28 @@ public class Etudiant{
 			return new Etudiant (matricule, nom, prenom, email, pwd, id_universite);
 		}
 		
-		public void nbr_book_authorized () throws SQLException
+		public void nbr_book_authorized (TypePackage pac) throws SQLException
 		{
-			 UniversiteRepository UnivRep= new UniversiteRepository();
-			 Universite univ = UnivRep.GetById(id_universite);
-			 if (univ.getPack() == TypePackage.Standard)
+			 if (pac == TypePackage.Standard)
 		     {
-		         setNbLivreMensuel_Autorise(10);
+		         this.setNbLivreMensuel_Autorise(10);
 		     }
-		     else if (univ.getPack() == TypePackage.Premium)
+		     else if (pac == TypePackage.Premium)
 		     {
-		    	setNbLivreMensuel_Autorise(10*2);
+		    	 this.setNbLivreMensuel_Autorise(10*2);
 		     }                           
 		     
 		}
 		
-		public void Add_Nbr_Books () throws SQLException
+		public void Add_Nbr_Books (TypePackage pac) throws SQLException
 		{
-			 UniversiteRepository UnivRep= new UniversiteRepository();
-			 Universite univ = UnivRep.GetById(id_universite);
 			 
-			 if (univ.getPack() == TypePackage.Standard)
+			 if (pac == TypePackage.Standard)
 		     {
 				 
 				 setNbLivreMensuel_Autorise(15);
 		     }
-		     else if (univ.getPack() == TypePackage.Premium)
+		     else if (pac == TypePackage.Premium)
 		     {
 		    	 setNbLivreMensuel_Autorise(15*2);
 		     } 

@@ -29,18 +29,16 @@ public class EtudiantService implements IEtdSrv{
 		 return true;
 	}
 	
-	public void AddNbrBooksAllStudent (int id_universite) throws SQLException
+	public void AddNbrBooksAllStudent (TypePackage pac) throws SQLException
 	{
-		 List <Etudiant> etudiants = new ArrayList <Etudiant>();
-		 UniversiteRepository UnivRep= new UniversiteRepository();
-		 Universite univ = UnivRep.GetById(id_universite);
+		 ArrayList<Etudiant> etudiants = GetEtudiatparLivreEmprunte();
 		 for (Etudiant E : etudiants) 
 		 {
-			 if (univ.getPack() == TypePackage.Standard)
+			 if (pac == TypePackage.Standard)
 		     {
 				 E.setNbLivreMensuel_Autorise(15);
 		     }
-		     else if (univ.getPack() == TypePackage.Premium)
+		     else if (pac == TypePackage.Premium)
 		     {
 		    	 E.setNbLivreMensuel_Autorise(15*2);
 		     } 
