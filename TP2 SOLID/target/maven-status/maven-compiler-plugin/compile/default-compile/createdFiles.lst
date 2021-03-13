@@ -1,0 +1,17 @@
+DisplayComposite.class
+MainApp.class
+UniversiteRepository.class
+TypePackage.class
+EtudiantService.class
+IJournal.class
+ControleurInscription.class
+IEtdRep.class
+ViewInscription.class
+DisplayEcran.class
+DBConnection.class
+AddDateToDisplay.class
+DisplayFichier.class
+Etudiant.class
+Universite.class
+EtudiantRepository.class
+IEtdSrv.class
